@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
   </head>
   <body>
+<<<<<<< HEAD
     <main id="main"></main>
       <script id="recipe-template" type="text/x-handlebars-template">
         <article>
@@ -29,10 +30,28 @@
           <input type="text" name="ingredients"><br>
           <input type="text" name="ingredients"><br>
           {{/each}}
+=======
+    <main id="main">
+      <script id="recipe-template" type="text/x-handlebars-template">
+        <header id="name">{{name}}</header>
+        <a onclick="displayEditForm()">Edit Recipe</a>
+        {{> recipeDetailsPartial}}
+      </script>
+      <script id="recipe-form-template" type="text/x-handlebars-template">
+        <form id="recipe-form" onsubmit="handleSubmit();return false;">
+          Name: <input type="text" id="name"><br>
+          Description: <input type="text" id="description"><br>
+          Ingredient: <input type="text" name="ingredient"><br>
+          Ingredient: <input type="text" name="ingredient"><br>
+          Ingredient: <input type="text" name="ingredient"><br>
+          Ingredient: <input type="text" name="ingredient"><br>
+          Ingredient: <input type="text" name="ingredient"><br>
+>>>>>>> da0b2e8a1688a0d3deebf61c6efb11de04cc8ebe
           <input type="submit">
         </form>
       </script>
       <script id="recipe-details-partial" type="text/x-handlebars-template">
+<<<<<<< HEAD
         <p id="description">{{description}}</p>
           <ul>
             {{#each ingredients}}
@@ -40,6 +59,18 @@
             {{/each}}
           </ul>
       </script>
+=======
+        <div id="description">{{description}}</div>
+        <div id="ingredients">
+          <ul>
+            {{#each ingredients}}
+            {{displayIngredient}}
+            {{/each}}
+          </ul>
+        </div>
+      </script>
+    </main>
+>>>>>>> da0b2e8a1688a0d3deebf61c6efb11de04cc8ebe
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
